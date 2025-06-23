@@ -7,7 +7,7 @@ This repo contains:
 - The **GEO_LOD** JSON Schema and human-readable spec under  
   `extensions/2.0/Vendor/GEO_LOD/`  
 - Minimal example models in `exampleModels/`  
-- (Optional) CI workflow to validate the schema
+
 
 ## Getting Started
 
