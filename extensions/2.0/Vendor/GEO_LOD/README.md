@@ -4,7 +4,7 @@ In visual-simulation toolchains (e.g. OpenFlight/Aechelon/Geo STUDIO), it’s rout
 By contrast, glTF’s built-in LOD patterns (e.g. MSFT_lod) expect a single node that is the LOD switcher, listing mesh indices. That works, but it can’t express “here’s a chassis, with three mesh children,” or “here’s a turret behavior, with its own LOD children,” in one neat file.
 Enter GEO_LOD—a small vendor extension that you attach to any grouping node (having no mesh of its own) whose children (the entire sub-tree parented by the LOD node) are considered the LOD variant for that part. Your loader/runtime software then simply activates that LOD node (and its children) based on it passing the distance or screen-coverage switchin & switchout criteria. Any dynamic transformation applied above the LOD in the hierarchy will automatically be applied to the active LOD.
 
-![Here is a very simple (tank) example](images/"tank hierarchy.png")
+![Here is a very simple (tank) example](images/tank-hierarchy.png)
                                           
 Each “Group” (in the above example) has no mesh itself. Holds three mesh-children for each LOD, and you can still animate or transform the group (rotate turret, deploy wheels, etc.) without rebinding when the LOD changes. 
 The following Geo STUDIO snapshot shows a more complex tank model as seen in Geo's tree view...
